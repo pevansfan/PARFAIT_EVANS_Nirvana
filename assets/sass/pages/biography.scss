@@ -1,0 +1,104 @@
+@use '../variables.scss';
+
+.biography {
+    background-color: variables.$background-color;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 100px;
+        gap: 5em;
+
+        &__img {
+            max-width: 800px;
+            width: 100%;
+            border-radius: 20px;
+            border: 2px solid variables.$secondary-color;
+            position: relative;
+            display: inline-block;
+            padding: 30px;
+            transition: all .3s;
+
+            img {
+                width: 100%;
+                border-radius: 20px;
+                transition: all .3s;
+            }
+
+            span {
+                position: absolute;
+                font-size: variables.$biggest-font;
+                transition: all .3s;
+
+                &:nth-child(2) {
+                    top: -20px;
+                    left: 5%;
+                    transform: rotate(10deg);
+                }
+
+                &:nth-child(3) {
+                    bottom: 10%;
+                    right: -20px;
+                }
+
+                &:nth-child(4) {
+                    bottom: 0;
+                    left: 0;
+                    transform: rotate(20deg);
+                }
+            }
+
+            &:hover,
+            &:active {
+                img {
+                    transform: scale(1.05);
+                }
+
+                span {
+                    &:nth-child(2) {
+                        transform: rotate(30deg) scale(1.50);
+                    }
+    
+                    &:nth-child(3) {
+                        transform: rotate(-20deg) scale(1.50);
+                    }
+    
+                    &:nth-child(4) {
+                        transform: rotate(-60deg) scale(1.50);
+                    }
+                }
+            }
+        }
+
+        &__description {
+            p {
+                line-height: 1.8;
+                border-right: 3px solid variables.$secondary-color;
+                padding-right: 10px;
+            }
+
+            .categories {
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                .category {
+                    border-radius: 30px;
+                    background-color: variables.$secondary-color;
+                    padding: 10px 20px;
+                    color: variables.$background-color;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .biography {
+        &__container {
+            flex-direction: column;
+        }
+    }
+}

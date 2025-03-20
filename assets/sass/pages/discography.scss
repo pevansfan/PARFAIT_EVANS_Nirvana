@@ -1,0 +1,122 @@
+@use '../variables.scss';
+
+.discography {
+    background-color: variables.$secondary-color;
+    border-radius: 30px;
+
+    &__container {
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+        width: 100%;
+        gap: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        background-color: variables.$background-color;
+
+        &__img {
+            max-width: 600px;
+            width: 100%;
+            max-height: 600px;
+            height: 100%;
+            /* Vous pouvez ajuster la largeur comme vous le souhaitez */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+
+            img {
+                width: 100%;
+                border-radius: 0 20px 20px 0;
+                height: 100%;
+                object-fit: cover;
+                transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            .slide-out {
+                transform: translateX(100%);
+                opacity: 0; // Rendre invisible progressivement
+            }
+        
+            // Animation d'entrée depuis la gauche
+            .slide-in {
+                transform: translateX(-100%);
+                opacity: 0;
+                animation: slide-in 0.5s ease-in-out forwards;
+            }
+        }
+
+        &__list {
+
+            width: 50%;
+            padding: 50px;
+            background-color: variables.$background-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            max-height: 600px;
+            height: 600px;
+            overflow-y: auto;
+            ol {
+                padding-left: 0;
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    cursor: pointer;
+                    margin-top: 30px;
+                    padding-bottom: 10px;
+                    padding-left: 20px;
+                    border-bottom: 1px solid variables.$secondary-color;
+                    border-width: 100%;
+                }
+            }
+        }
+    }
+
+    .active {
+        font-weight: variables.$font-bold;
+        color: blue;
+        border-right: 10px solid blue;
+    }
+
+    @keyframes slide-in {
+        from {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .discography {
+        &__container {
+            max-width: 800px;
+            flex-direction: column;
+
+            &__img {
+                max-width: 100%;
+                max-height: 100%;
+
+                img {
+                    border-radius: 20px;
+                }
+            }
+
+            &__list {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@use '../variables.scss';
+
+.videos {
+    .carousel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    video {
+        justify-self: center;
+        border-radius: 20px;
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        filter: invert(50%) sepia(100%) saturate(800%) brightness(3%) hue-rotate(82deg);
+        opacity: .9 !important;
+    }
+}

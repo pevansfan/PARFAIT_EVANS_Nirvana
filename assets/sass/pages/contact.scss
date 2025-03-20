@@ -1,0 +1,73 @@
+@use '../variables.scss';
+
+.contact {
+    background-color: variables.$secondary-color;
+    border-radius: 30px;
+
+    &__container {
+        margin: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            text-align: center;
+            font-size: variables.$h3-font-size;
+        }
+
+        &__infos {
+            margin: 30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            .card {
+                padding: 30px 60px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .logo {
+                    font-size: 6em;
+                }
+
+                .link {
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: all .3s;
+                        color: variables.$primary-color;
+
+                        ion-icon {
+                            margin-left: 10px;
+                            transition: all .3s;
+                        }
+                    }
+
+                    a:hover {
+                        ion-icon {
+                            transform: translateX(5px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .contact {
+        &__container {
+            h2 {
+                font-size: variables.$normal-font-size;
+            }
+            &__infos {
+                grid-template-columns: auto;
+            }
+        }
+    }
+}
