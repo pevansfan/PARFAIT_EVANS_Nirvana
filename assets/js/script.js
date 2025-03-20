@@ -72,7 +72,7 @@ albumItems.forEach((li, index) => {
 
                 // Mettre à jour l’image
                 albumImage.src = albums[index].image;
-                albumImage.alt = albums[index].title;
+                albumImage.alt = "Image de l'album " + albums[index].title;
 
                 // Ajouter la classe d’entrée après un petit délai
                 setTimeout(() => {

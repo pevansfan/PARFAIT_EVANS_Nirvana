@@ -84,6 +84,7 @@
 
 .nav__responsive {
     display: none;
+    opacity: 0;
     height: 60px;
     background-color: var(--color-1);
     display: flex;
@@ -100,6 +101,7 @@
 }
 
 .nav__responsive a {
+    display: none;
     color: variables.$background-color;
     font-size: 1.3rem;
     text-decoration: none;
@@ -155,6 +157,7 @@
 @media(max-width: 1024px) {
     .nav__responsive {
         display: block;
+        opacity: 1;
     }
 
     .nav {
