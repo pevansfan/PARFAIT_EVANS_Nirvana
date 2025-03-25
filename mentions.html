@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 50px;
+            margin: auto;
+        }
+
+        .container div {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
+        <div class="nav__img">
+            <a href="index.html"><img src="assets/img/logo-nirvana.png" alt="Logo de Nirvana"></a>
+        </div>
+        <ul class="nav__list">
+            <li class="nav__list__element"><a href="index.html#biography">Biographie</a></li>
+            <li class="nav__list__element"><a href="index.html#discography">Discographie</a></li>
+            <li class="nav__list__element"><a href="index.html#videos">Vidéos</a></li>
+            <li class="nav__list__element"><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <ul class="nav__medias">
+            <li class="nav__medias__logos"><a href="https://www.instagram.com/off1cial_nirvana/" target="_blank"
+                    class="media-link" aria-label="Instagram de Nirvana"><ion-icon name="logo-instagram"></ion-icon></a>
+            </li>
+            <li class="nav__medias__logos"><a href="https://www.youtube.com/channel/UCFMZHIQMgBXTSxsr86Caazw"
+                    target="_blank" class="media-link" aria-label="YouTube de Nirvana"><ion-icon
+                        name="logo-youtube"></ion-icon></a></li>
+            <li class="nav__medias__logos"><a href="https://www.facebook.com/Nirvana/" target="_blank"
+                    class="media-link" aria-label="Facebook de Nirvana"><ion-icon name="logo-facebook"></ion-icon></a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Barre de navigation au responsive -->
+    <nav class="nav__responsive" role="navigation" aria-label="Navigation mobile">
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button" aria-label="Ouvrir le menu">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg>
+        </label>
+        <label id="overlay" for="sidebar-active"></label>
+        <div class="links-container">
+            <label for="sidebar-active" class="close-sidebar-button" aria-label="Fermer le menu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+            </label>
+
+            <a href="index.html#biography">Biographie</a>
+            <a href="index.html#discography">Discographie</a>
+            <a href="index.html#videos">Vidéos</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <h1>Mentions Légales</h1>
+
+            <div>
+                <h2>1. Éditeur du site</h2>
+                <p><strong>Nom du site :</strong> Nirvana</p>
+                <p><strong>Responsable de publication :</strong> Parfait Fanilohery Evans</p>
+            </div>
+
+            <div>
+                <h2>2. Hébergeur</h2>
+                <p><strong>Nom de l'hébergeur :</strong> GitHub Pages</p>
+                <p><strong>Adresse :</strong> Github</p>
+            </div>
+
+            <div>
+                <h2>3. Propriété intellectuelle</h2>
+                <p>Tout le contenu présent sur ce site (textes, images, logos, etc.) est protégé par les lois en vigueur
+                    sur
+                    la propriété intellectuelle. Toute reproduction, distribution ou utilisation sans autorisation est
+                    interdite.</p>
+            </div>
+
+            <div>
+                <h2>4. Données personnelles</h2>
+                <p>Les informations collectées sur ce site sont destinées à [usage des données, ex. amélioration du
+                    service,
+                    contact client]. Conformément au Règlement Général sur la Protection des Données (RGPD), vous
+                    disposez
+                    d'un droit d'accès, de rectification et de suppression des données vous concernant. Pour exercer ces
+                    droits, veuillez nous contacter à l'adresse suivante : [Adresse email de contact].</p>
+            </div>
+
+            <div>
+                <h2>5. Cookies</h2>
+                <p>Ce site utilise des cookies pour améliorer l'expérience utilisateur. Vous pouvez configurer votre
+                    navigateur pour refuser les cookies.</p>
+            </div>
+
+            <div>
+                <h2>6. Responsabilité</h2>
+                <p>L'éditeur du site ne saurait être tenu responsable des erreurs ou omissions présentes sur le site, ni
+                    d'une interruption ou dysfonctionnement des services.</p>
+
+            </div>
+
+            <div>
+                <h2>7. Droit applicable</h2>
+                <p>Les présentes mentions légales sont régies par le droit français. En cas de litige, les tribunaux
+                    français seront seuls compétents.</p>
+            </div>
+
+        </div>
+    </main>
+    <footer class="footer section">
+        <div class="footer__mentions">
+            <p><a href="mentions.html">Mentions légales</a></p>
+        </div>
+        <div class="footer__copyright">
+            <p>&copy; Copyright 2025. Tous droits réservés.</p>
+        </div>
+        <div class="footer__creator">
+            <p>Site produit par <span>Parfait Fanilohery Evans</span></p>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

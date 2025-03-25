@@ -540,6 +540,10 @@ img {
   align-items: center;
   color: #FFFFFF;
 }
+.footer__mentions p a {
+  color: #fff;
+  text-decoration: underline;
+}
 .footer__copyright {
   margin: 10px;
   text-align: center;

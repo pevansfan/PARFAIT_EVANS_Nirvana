@@ -8,6 +8,13 @@
     align-items: center;
     color: variables.$background-color;
 
+    &__mentions {
+        p a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+
     &__copyright {
         margin: 10px;
         text-align: center;
